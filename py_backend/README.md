@@ -1,6 +1,11 @@
 # Web3 application
 
 ## How to Run
+change .env.example to .env and add openai key to .env
+```
+OPENAI_API_KEY = "sk-..."
+```
+
 build virtual env
 ```
 python3 -m venv venv

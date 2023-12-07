@@ -3,8 +3,10 @@ import time
 import tiktoken
 import os
 import re
+from dotenv import load_dotenv
+load_dotenv()
 
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 COMPLETIONS_MODEL = "gpt-3.5-turbo"
