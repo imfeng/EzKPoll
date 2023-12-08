@@ -92,7 +92,7 @@ export const MultiplePoll = ({
             onClickVote(result)
             console.log('info clicked')
           setIsLoading(true);
-          await delay(1000);
+          await delay(7000);
           setIsLoading(false);
       
           if (!voted) {
