@@ -90,13 +90,15 @@ export const MultiplePoll = ({
             backgroundColor: theme?.backgroundColor
           }}
           onClick={async () => {
-            onClickVote(result)
+            // onClickVote(result)
+            
+      
+          if (!voted) {
             console.log('info clicked')
           setIsLoading(true);
           await delay(7000);
           setIsLoading(false);
-      
-          if (!voted) {
+          
             setVoted(true)
             manageVote(results, result, answerRefs, theme)
             console.log({
