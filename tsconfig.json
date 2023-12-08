@@ -1,7 +1,8 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "target": "es5",
+        "jsx": "react-jsx",
+        "target": "es6",
         "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,
         "skipLibCheck": true,

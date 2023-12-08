@@ -2,6 +2,7 @@ import React from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { ParticleAuthConnector, ParticleOptions } from './particleAuth';
 import './proflie.scss';
+import Poll from './component/Poll';
 
 const particleOptions: ParticleOptions = {
     projectId: process.env.REACT_APP_PROJECT_ID as string,
@@ -21,9 +22,12 @@ export default function Profile() {
     return (
         <div className="content-body">
             {address ? (
+                <>
+                <div>Wallet Address: {address}</div>
                 <button className="btn" onClick={() => disconnect()}>
                     Disconnect
                 </button>
+                </>
             ) : (
                 <>
                     <button className="btn" onClick={() => connect()}>
@@ -62,8 +66,11 @@ export default function Profile() {
                     </button>
                 </>
             )}
-
-            {address && <div>Wallet Address: {address}</div>}
+            {address ? (
+                <>
+                <Poll></Poll>
+                </>
+            ): <></>}
         </div>
     );
 }
