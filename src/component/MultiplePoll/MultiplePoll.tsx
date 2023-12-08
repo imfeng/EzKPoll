@@ -155,7 +155,7 @@ export const MultiplePoll = ({
             <p>Tx Hash: <a 
             className='text-blue-500'
             target='_blank'
-            href="https://zksync2-testnet.zkscan.io/tx/0x0e226e7566ae5567d3e32e4a75040a56bf324682107f9116f591f628986671fe/token-transfers">0x0e226e7566ae5567d3e32e4a75040a56bf324682107f9116f591f628986671fe</a></p>
+            href="https://zksync2-testnet.zkscan.io/tx/0x2a630f0fde6a58a67b968edf68df951619a6dac222d5a122ca0e8510f9a523c5/token-transfers">0x2a630f0fde6a58a67b968edf68df951619a6dac222d5a122ca0e8510f9a523c5</a></p>
           </div>
           <h3>Raw data: </h3>
           <pre>
