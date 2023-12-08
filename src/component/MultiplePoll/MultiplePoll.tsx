@@ -77,13 +77,14 @@ export const MultiplePoll = ({
         <>
         <div 
         key={'a-' +result.id}
-        className={`btn-box flex flex-wrap justify-center align-center ${styles.answer}`}>
+        className={`btn-box flex flex-wrap justify-center align-center ${styles.answer} ${isLoading ? styles.hide : ''}`}>
         <div
           key={result.id}
           role='button'
           id={'mulAnswer' + result.id}
           className={
             voted ? styles.answer : styles.answer_hover + ' ' + styles.answer
+            
           }
           style={{
             backgroundColor: theme?.backgroundColor
