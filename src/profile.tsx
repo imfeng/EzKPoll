@@ -23,7 +23,11 @@ export default function Profile() {
         <div className="content-body">
             {address ? (
                 <>
-                <div>Wallet Address: {address}</div>
+                <div>Wallet Address: 
+                    <a 
+                    className="text-blue-500 hover:underline"
+                    target="_blank" href={`https://zksync2-testnet.zkscan.io/address/${address}/transactions`}>{address}</a>
+                </div>
                 <button className="btn" onClick={() => disconnect()}>
                     Disconnect
                 </button>
