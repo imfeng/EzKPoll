@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 const Poll = () => {
   const [isVoted, setIsVoted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   
   const resData = [
     { id: 0, text: 'vitalik.eth', votes: 6 },
@@ -23,25 +24,39 @@ const Poll = () => {
     textAnswerColor: 'rgba(233,233,233)',
   }
   
-  function vote(item: Result, results: Result[]) {
+  async function vote(item: Result, results: Result[]) {
     // Here you probably want to manage
     // and return the modified data to the server.
+    setIsLoading(true);
+    await delay(7000);
     setIsVoted(true);
+    setIsLoading(false);
+
+    // setIsVoted(true);
   }
 
   return (
     <div className="poll-box max-w-3xl">
-      
+      {/* <div className="poll-w">
+
+      </div> */}
       <MultiplePoll
         question='Who will be the most richest people in 2024 ?'
         results={resData}
         theme={customTheme}
         onVote={vote}
-        isVoted={false}
+        isVoted={isVoted}
       />
+      
       {
         isVoted ? (
           <>
+          <div className="tx-box">
+            <p>Tx Hash: <a 
+            className='text-blue-500'
+            target='_blank'
+            href="https://zksync2-testnet.zkscan.io/tx/0x3235107b5052a817714f1ed1c4840de4cde5c86e8dbea1b04f041e9bb8acc2cb/token-transfers">0x3235107b5052a817714f1ed1c4840de4cde5c86e8dbea1b04f041e9bb8acc2cb</a></p>
+          </div>
           <h3>Raw data: </h3>
           <pre>
             {JSON.stringify({
@@ -68,4 +83,9 @@ const Poll = () => {
   )
 }
 
+async function delay(ms: number) {
+  return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
 export default Poll;
+
