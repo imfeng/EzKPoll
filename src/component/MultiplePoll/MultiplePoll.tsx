@@ -98,7 +98,7 @@ export const MultiplePoll = ({
           setIsLoading(true);
           await delay(7000);
           setIsLoading(false);
-          
+
             setVoted(true)
             manageVote(results, result, answerRefs, theme)
             console.log({
@@ -155,7 +155,7 @@ export const MultiplePoll = ({
             <p>Tx Hash: <a 
             className='text-blue-500'
             target='_blank'
-            href="https://zksync2-testnet.zkscan.io/tx/0x3235107b5052a817714f1ed1c4840de4cde5c86e8dbea1b04f041e9bb8acc2cb/token-transfers">0x3235107b5052a817714f1ed1c4840de4cde5c86e8dbea1b04f041e9bb8acc2cb</a></p>
+            href="https://zksync2-testnet.zkscan.io/tx/0x0e226e7566ae5567d3e32e4a75040a56bf324682107f9116f591f628986671fe/token-transfers">0x0e226e7566ae5567d3e32e4a75040a56bf324682107f9116f591f628986671fe</a></p>
           </div>
           <h3>Raw data: </h3>
           <pre>
