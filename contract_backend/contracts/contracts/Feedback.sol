@@ -16,7 +16,7 @@ contract Feedback {
    
     event FeedbackAdded(uint256 indexed groupId, uint256 feedbackType, uint256 newValue);
 
-    constructor(address semaphoreAddress, uint256 _groupId) {
+    constructor() {
         semaphore = ISemaphore(semaphoreAddress);
         groupId = _groupId;
 

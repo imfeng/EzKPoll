@@ -22,6 +22,8 @@ export const MultiplePoll = ({
   isVoted,
   isVotedId,
 }: MultiplePollProps) => {
+  const { address } = useAccount();
+
   const [voted, setVoted] = useState<boolean>(false)
   const answerRefs = useRef<RefObject<HTMLDivElement>[]>(
     results.map(() => createRef<HTMLDivElement>())
@@ -69,7 +71,7 @@ export const MultiplePoll = ({
           </div>
           {voted && (
             <span style={{ color: theme?.textColor }}>
-              {result.percentage}%
+              {result.votes}
             </span>
           )}
         </div>
@@ -77,3 +79,7 @@ export const MultiplePoll = ({
     </article>
   )
 }
+function useAccount(): { address: any } {
+  throw new Error('Function not implemented.')
+}
+
